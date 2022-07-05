@@ -1,0 +1,107 @@
+<!DOCTYPE html>    
+<html>
+    <head>
+        <title>calculator</title>
+    </head>
+<body>
+
+<form action="/" method="GET">
+<input type="text"name="n1" placeholder="FirstNumber">
+<input type="text"name="n2"placeholder="SecondNUmber"> 
+<h1><a href="bmicalculator.html">welcome</a></h1>
+<button type="submit" name="submit">calculate</button></form> 
+<button onmouseover="over()" onmouseout="out()"> </button>
+<hr>
+<table cellspacing="20%">
+    <thead>
+  
+            <tr>
+                <th>Mydate</th>
+                <th>Myday</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>23</td>
+                        <td>2022</td>
+                        </tr>
+                <tr>
+                    <td>24</td>
+                    <td>2023</td>
+                </tr>
+            
+
+        </tbody>
+</table>
+<hr>
+
+ <p id="passage"></p>
+ <h1 style="color: red;">Hello world</h1>
+ <a name="html">HTML tutorial</a><br>
+ <a name="css">CSS tutorial</a><br>
+ <a name="js">JS tutorial</a><br>
+ <!-- <p>Number of p tag in this document is:</p> -->
+ <p id="demo"></p>
+
+
+ <button onmouseover="myFunction()">Button</button>
+ <p class="myclass"> This is a paragraph</p>
+ <p class="myclass">This is a paragraph</p>
+ <p>Demonstrate fadeIn() with different parameters</p>
+ <button>click to fadeIn boxes</button>
+
+ <div class="d-flex justify-content-between" style="width: 80px; height: 80px;display: none; background-color: blue;"></div>
+ <div class="d-flex justify-content-between" style="width: 80px; height: 80px;display: none; background-color: red;"></div>
+ <div class="d-flex justify-content-between" style="width: 80px; height: 80px;display: none; background-color: brown;"></div>
+ <div class="d-flex">
+    <div class="p-2 justify-content-between ">Flex item 1</div>
+    <div class="p-2 justify-content-between">Flex item 2</div>
+    <div class="p-2 justify-content-between">Flex item 3</div>
+  </div>
+  <div class="d-flex">
+    <div class="p-2 ">Flex item 1</div>
+    <div class="p-2 ">Flex item 2</div>
+    <div class="p-2 ">Flex item 3</div>
+  </div>
+    </body>
+    <script>
+
+    function myFunction(){
+document.open();
+document.write("<h1>Hello world</h1>");
+document.writeln("<h2>open a document that overwrites an original document</h2>");
+document.close();
+    }
+function myFunction() {
+
+ const collection=document.getElementsByClassName("myclass")
+
+for (let i = 0; i < collection.length; i++) {
+ collection[i].style.fontSize = "24px";
+}
+}
+
+  const ev = document.createEvent("MouseEvent");
+  ev.initMouseEvent("mouseover", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+  document.getElementById("myDiv").dispatchEvent(ev);
+
+ const para =document.createElement("button")
+ para.innerHTML="this is paragraph";
+ document.getElementById("demo").appendChild(para);
+
+ $(document).ready(function(){
+     $("button").click(function(){
+         $(".div1").fadeIn();
+         $(".div2").fadeIn("slow");
+         $(".div3").fadeIn(3000);
+     })
+
+ })
+
+
+
+     </script>
+</html>
+ 
